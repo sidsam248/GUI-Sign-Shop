@@ -1,0 +1,31 @@
+name: GuiSignShop
+version: 0.6
+description: Gui sign shop
+main: me.liveinacupboard.gsshop.GuiSignShop
+author: liveinacupboard
+softdepend: [Vault]
+
+commands:
+  guishop:
+    description: main command
+
+permissions:
+  guishop.*:
+    description: Access to all commands
+    children:
+      guishop.use: true
+      guishop.admin: true
+      guishop.spawner: true
+      guishop.load: true
+  guishop.use:
+    description: Use the shop signs
+    default: op
+  guishop.admin:
+    description: Make the shop signs
+    default: op
+  guishop.spawner:
+    description: Place a mob spawner
+    default: op
+  guishop.load:
+    description: reload the plugin config
+    default: op
